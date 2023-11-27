@@ -2,7 +2,7 @@
 
 ## Introduction
 
-Welcome to the Mud-Svelte Template! This template serves as a starting point for building decentralized applications using [Mud](https://github.com/latticexyz/mud) framework with Svelte. It's designed to simplify the front end implementation using svlete stores and writables.
+Welcome to the Mud-Svelte Template! This template serves as a starting point for building decentralized applications using [Mud](https://github.com/latticexyz/mud) framework with Svelte. It's designed to simplify the front end implementation using svelte stores and writables.
 
 ## Features
 
