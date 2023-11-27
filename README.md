@@ -46,4 +46,4 @@ Contributions to improve this template are welcome!
 
 ## License
 
-MUD is open-source software [licensed as MIT](LICENSE).
+MUD is open-source software licensed as MIT.
