@@ -32,8 +32,8 @@ Ensure you have the following installed:
     pnpm install
    ```
 4. Start the development server with:
- ```bash
-pnpm dev
+   ```bash
+    pnpm dev
    ```
 Access your application at http://localhost:3000.
 
