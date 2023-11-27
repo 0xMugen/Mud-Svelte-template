@@ -1,10 +1,33 @@
 <script lang="ts">
-  let count: number = 0
-  const increment = () => {
-    count += 1
+  import { onMount, onDestroy } from "svelte";
+  import {
+    useSystemCalls,
+    useComponents,
+    subscribeToComponentUpdate,
+  } from "../MUDAccessor";
+
+  import { writable } from "svelte/store";
+  const counter = writable(0);
+  const components = useComponents();
+  const systemCalls = useSystemCalls();
+  let unsubscribeCounter = () => {};
+  onMount(() => {
+    unsubscribeCounter = subscribeToComponentUpdate(
+      components?.Counter,
+      counter
+    );
+  });
+  onDestroy(() => {
+    unsubscribeCounter();
+  });
+  async function incrementCounter() {
+    if (systemCalls?.increment) {
+      await systemCalls.increment();
+    }
   }
 </script>
 
-<button on:click={increment}>
-  count is {count}
-</button>
+<main>
+  <button on:click={incrementCounter}>Increment Counter</button>
+  <h1>Counter Value: {$counter}</h1>
+</main>

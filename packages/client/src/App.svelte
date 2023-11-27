@@ -35,6 +35,11 @@
 </main>
 
 <style>
+  main {
+    text-align: center;
+    padding: 1em;
+    margin: 0 auto;
+  }
   .logo {
     height: 6em;
     padding: 1.5em;
